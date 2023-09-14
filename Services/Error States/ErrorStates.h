@@ -8,8 +8,10 @@
 #ifndef SERVICES_ERRORSTATES_H_
 #define SERVICES_ERRORSTATES_H_
 
+
 #define Func_NOK  		 0
 #define Func_OK			 1
 #define Func_NULLPOINTER 2
+
 
 #endif /* SERVICES_ERRORSTATES_H_ */
