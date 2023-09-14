@@ -8,6 +8,7 @@
 #ifndef SERVICES_STD_TYPES_H_
 #define SERVICES_STD_TYPES_H_
 
+
 /*	Unsigned Type	*/
 typedef unsigned char 	       u8;
 typedef unsigned short int     u16;

@@ -8,6 +8,7 @@
 #ifndef SERVICES_BIT_MATH_H_
 #define SERVICES_BIT_MATH_H_
 
+
 #define SET_BIT(BYTE,Bit_NO) (BYTE) |= (1<<(Bit_NO))
 #define CLR_BIT(BYTE,Bit_NO) (BYTE) &= ~(1<<(Bit_NO))
 #define TOGGEL_BIT(BYTE,Bit_NO) (BYTE) ^= 1<<(Bit_NO)
