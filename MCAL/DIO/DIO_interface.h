@@ -1,6 +1,6 @@
 /*
- *  	Created on: 15/03/2023
- *      Driver: DIO Driver
+ *  	Created on: 30/04/2023
+ *      LAYER : MCAL
  *      Author: Mohamed sarary
  *      File  : DIO_Interface.h
  */
@@ -8,9 +8,7 @@
 #ifndef MCAL_DIO_DIO_INTERFACE_H_
 #define MCAL_DIO_DIO_INTERFACE_H_
 
-#include "../../Services/STD_TYPES/STD_TYPES.h"
-
-
+#include "../../SERVICES/StdTypes.h"
 
 /*i can use Enum instead of it*/
 #define DIO_u8PortA  0
@@ -24,8 +22,11 @@
 #define DIO_u8_PORT_LOW   0
 #define DIO_u8_PORT_HIGH  0XFF
 
-#define DIO_u8_INPUT  0
-#define DIO_u8_OUTPUT 1
+#define DIO_u8_PIN_INPUT  0
+#define DIO_u8_PIN_OUTPUT 1
+
+#define DIO_u8_PIN_HIGH 1
+#define DIO_u8_PIN_LOW  0
 
 #define DIO_u8_PIN_00 0
 #define DIO_u8_PIN_01 1
@@ -36,19 +37,19 @@
 #define DIO_u8_PIN_06 6
 #define DIO_u8_PIN_07 7
 
-#define DIO_u8_HIGH 1
-#define DIO_u8_LOW  0
 
-void DIO_Set_Port_Dir(u8 Copy_u8Port , u8 Copy_u8Direction);
+u8 DIO_u8Set_Port_Dir(u8 Copy_u8Port , u8 Copy_u8Direction);
 
-void DIO_Set_Port_Val(u8 Copy_u8Port , u8 Copy_u8Value);
+u8 DIO_u8Set_Port_Val(u8 Copy_u8Port , u8 Copy_u8Value);
 
-void DIO_Set_Pin_Dir(u8 Copy_u8Port , u8 Copy_u8Pin , u8 Copy_u8Direction);
+u8 DIO_u8Set_Pin_Dir(u8 Copy_u8Port , u8 Copy_u8Pin , u8 Copy_u8Direction);
 
-void DIO_Set_Pin_Val(u8 Copy_u8Port , u8 Copy_u8Pin , u8 Copy_u8Value);
+u8 DIO_u8Set_Pin_Val(u8 Copy_u8Port , u8 Copy_u8Pin , u8 Copy_u8Value);
 
-u8 DIO_Read_Pin_Val (u8 Copy_u8Port , u8 Copy_u8Pin );
+u8 DIO_Read_Pin_Val(u8 Copy_u8Port, u8 Copy_u8Pin , u8* Copy_u8PinValue) ;
 
-void DIO_ACT_PULLUP(u8 Copy_u8Port , u8 Copy_u8Pin );
+u8 DIO_u8ACT_PULLUP(u8 Copy_u8Port , u8 Copy_u8Pin );
+
+u8 DIO_u8Toggle_Pin(u8 Copy_u8Port , u8 Copy_u8Pin );
 
 #endif /* MCAL_DIO_DIO_INTERFACE_H_ */
