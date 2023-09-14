@@ -1,6 +1,6 @@
 /*
  *  	Created on: 09/07/2023
- *      Driver: CLCD Driver
+ *      LAYER : HAL
  *      Author: Mohamed sarary
  *      File  : CLCD_Interface.h
  */
@@ -9,7 +9,7 @@
 #ifndef HAL_CLCD_CLCD_INTERFACE_H_
 #define HAL_CLCD_CLCD_INTERFACE_H_
 
-#include "../../SERVICES/STD_TYPES.h"
+#include "../../SERVICES/StdTypes.h"
 
 	/* ROWS	*/
 #define CLCD_u8_ROW_00		0

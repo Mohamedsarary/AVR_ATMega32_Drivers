@@ -1,6 +1,6 @@
 /*
  *  	Created on: 09/07/2023
- *      Driver: CLCD Driver
+ *      LAYER : HAL
  *      Author: Mohamed sarary
  *      File  : CLCD_Program.c
  */
@@ -8,8 +8,8 @@
 #include "CLCD_Config.h"
 #include "CLCD_Interface.h"
 #include "CLCD_Private.h"
-#include "../../SERVICES/BIT_MATH.h"
-#include "../../SERVICES/STD_TYPES.h"
+#include "../../SERVICES/BitMath.h""
+#include "../../SERVICES/StdTypes.h""
 #include "../../MCAL/DIO/DIO_interface.h"
 #include "util/delay.h"
 
@@ -20,8 +20,8 @@ void CLCD_voidInit(void)
 	DIO_u8Set_Port_Dir( CLCD_DATA_PORT , DIO_u8_PORT_OUTPUT );
 	DIO_u8Set_Pin_Dir( CLCD_CONTROL_PORT , CLCD_RS_PIN , DIO_u8_PIN_OUTPUT );
 	DIO_u8Set_Pin_Dir( CLCD_CONTROL_PORT , CLCD_EN_PIN , DIO_u8_PIN_OUTPUT );
-	//DIO_u8Set_Pin_Dir( CLCD_CONTROL_PORT , CLCD_RW_PIN , DIO_u8_PIN_OUTPUT );
-	//DIO_u8Set_Pin_Val( CLCD_CONTROL_PORT , CLCD_RW_PIN , DIO_u8_PIN_LOW	   );
+	DIO_u8Set_Pin_Dir( CLCD_CONTROL_PORT , CLCD_RW_PIN , DIO_u8_PIN_OUTPUT );
+	DIO_u8Set_Pin_Val( CLCD_CONTROL_PORT , CLCD_RW_PIN , DIO_u8_PIN_LOW	   );
 
 
 	/* INITIALIZAION OF 8Bit-MODE CLCD */

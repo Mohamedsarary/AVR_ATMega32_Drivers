@@ -1,6 +1,6 @@
 /*
  *  	Created on: 09/07/2023
- *      Driver: CLCD Driver
+ *      LAYER : HAL
  *      Author: Mohamed sarary
  *      File  : CLCD_Config.h
  */
