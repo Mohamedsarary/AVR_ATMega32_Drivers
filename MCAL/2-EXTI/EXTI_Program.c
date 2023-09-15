@@ -1,30 +1,16 @@
 /*
- *  	Created on: 11/05/2023
- *      Driver: EXTI Driver
+ *  	Created on: 15/09/2023
+ *      LAYER : HAL
  *      Author: Mohamed sarary
  *      File  : EXTI_Program.c
  */
 
-#include "../../SERVICES/BIT_MATH.h"
-#include "../../SERVICES/STD_TYPES.h"
-#include "../../SERVICES/errorStates.h"
+#include "../../SERVICES/BitMath.h"
+#include "../../SERVICES/StdTypes.h"
+#include "../../SERVICES/ErrorStates.h"
 #include "EXTI_Config.h"
 #include "EXTI_Interface.h"
 #include "EXTI_Private.h"
-
-u8 GIE_u8ENB(void) {
-	u8 Func_State = Func_NOK;
-	SET_BIT(SREG, GIE_I);
-	Func_State = Func_OK;
-	return Func_State;
-}
-
-u8 GIE_u8DIS(void) {
-	u8 Func_State = Func_NOK;
-	CLR_BIT(SREG, GIE_I);
-	Func_State = Func_OK;
-	return Func_State;
-}
 
 u8 EXTI_u8Init(void) {
 	u8 Func_State = Func_NOK;
@@ -54,8 +40,8 @@ u8 EXTI_u8Init(void) {
 
 	/* INTERRUPT LINE 0 MODE : RISING EDGE  */
 #if EXTI0_MODE == EXTI_RISINGEDGE
-	SET_BIT(MCUCR,ISC00);
-	SET_BIT(MCUCR,ISC01);
+	SET_BIT(MCUCR, ISC00);
+	SET_BIT(MCUCR, ISC01);
 	Func_State = Func_OK;
 #endif
 #endif
@@ -167,7 +153,7 @@ u8 EXTI_u8ClearFlag(void) {
 	SET_BIT(GIFR,INTF2);
 	Func_state = Func_OK;
 #endif
-	return Func_state ;
+	return Func_state;
 }
 
 void INT0_CALLBACK(void (*Copy_voidFunc)(void)) {
@@ -191,18 +177,15 @@ void INT2_CALLBACK(void (*Copy_voidFunc)(void)) {
 
 }
 
-void __vector_1(void)
-{
+void __vector_1(void) {
 	INT0_PCallBack();
 }
 
-void __vector_2(void)
-{
+void __vector_2(void) {
 	INT1_PCallBack();
 }
 
-void __vector_3(void)
-{
+void __vector_3(void) {
 	INT2_PCallBack();
 
 }

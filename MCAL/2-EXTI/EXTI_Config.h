@@ -1,6 +1,6 @@
 /*
- *  	Created on: 11/05/2023
- *      Driver: EXTI Driver
+ *  	Created on: 15/09/2023
+ *      LAYER : HAL
  *      Author: Mohamed sarary
  *      File  : EXTI_Config.h
  */
@@ -37,7 +37,7 @@
   * COMMENT UN-NEEDED LINE
   */
 
-#define EXTI_LINE0_EN
+#define   EXTI_LINE0_EN
 //#define EXTI_LINE1_EN
 //#define EXTI_LINE2_EN
 
