@@ -602,4 +602,27 @@ void __vector_4(void){
 }
 
 
+/*************************************************************************************************************/
+/*************************************** WATCH DOG TIMER FUNCTIONS *******************************************/
+/*************************************************************************************************************/
 
+void TIMER_voidWDTSLEEP(void)
+{
+
+	WDTCR &= WDT_PRS_MASK ;
+	WDTCR |= WDT_PRESCALER ;
+
+}
+void TIMER_voidWDTENB(void)
+{
+
+	SET_BIT(WDTCR,WDTCR_WDE);
+
+}
+void TIMER_voidWDTDIS(void)
+{
+
+	WDTCR |= 0b00011000 ;  	/* SET BITS (3,4) AT THE SAME CLK CYCLE */
+	WDTCR = 0 ;				/* I NEED TO DISABLE SO DON'T CARE ABOUT ANOTHER BITS VALUES */
+
+}

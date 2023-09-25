@@ -11,6 +11,7 @@
 #include "../../SERVICES/StdTypes.h"
 
 #define NULL				0
+#define WDT_PRS_MASK		0b11111000
 
 /*************************************************************************************************************/
 /************************************ TIMERS REGISTER ADDRESSES **********************************************/
@@ -37,6 +38,10 @@
 #define TCCR2   *((volatile u8*)(0x45))
 #define TCNT2   *((volatile u8*)(0x44))
 #define OCR2    *((volatile u8*)(0x43))
+
+/* WATCH DOG TIMER REGISTERS */
+#define WDTCR	*((volatile u8*)(0x41))
+#define MCUCSR	*((volatile u8*)(0x54))
 
 /*************************************************************************************************************/
 /***************************************** END OF REGISTER ADDRESSES *****************************************/
@@ -111,12 +116,17 @@
 #define	TCCR2_CS21		1
 #define	TCCR2_CS20		0
 
-#define TIMSK_TOIE2	6
-#define TIMSK_OCIE2	7
+#define TIMSK_TOIE2		6
+#define TIMSK_OCIE2		7
 
-#define TIFR_TOV2	6
-#define TIFR_OCF2	7
+#define TIFR_TOV2		6
+#define TIFR_OCF2		7
 
+#define WDTCR_WDP0		0
+#define WDTCR_WDP1		1
+#define WDTCR_WDP2		2
+#define WDTCR_WDE		3
+#define WDTCR_WDTOE		4
 
 /*************************************************************************************************************/
 /**************************************  END OF TIMERS REGISTER BITS *****************************************/
