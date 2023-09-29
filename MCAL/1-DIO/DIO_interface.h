@@ -46,6 +46,8 @@ u8 DIO_u8Set_Pin_Dir(u8 Copy_u8Port , u8 Copy_u8Pin , u8 Copy_u8Direction);
 
 u8 DIO_u8Set_Pin_Val(u8 Copy_u8Port , u8 Copy_u8Pin , u8 Copy_u8Value);
 
+u8 DIO_GET_Pin_Val(u8 Copy_u8Port, u8 Copy_u8Pin ) ;
+
 u8 DIO_Read_Pin_Val(u8 Copy_u8Port, u8 Copy_u8Pin , u8* Copy_u8PinValue) ;
 
 u8 DIO_u8ACT_PULLUP(u8 Copy_u8Port , u8 Copy_u8Pin );
