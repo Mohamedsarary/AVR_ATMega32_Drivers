@@ -1,0 +1,43 @@
+/*
+ *  	Created on: 23/10/2023
+ *      LAYER : MCAL
+ *      Author: Mohamed sarary
+ *      File  : I2C_Config.h
+ */
+
+#ifndef MCAL_I2C_I2C_CONFIG_H_
+#define MCAL_I2C_I2C_CONFIG_H_
+
+
+#define F_CPU			8000000UL
+
+#define SCL_CLOCK		400000UL
+
+/*
+ * I2C PRESCALLER OPTIONS :-
+ * 1- I2C_FREQ_DIV_BY1
+ * 2- I2C_FREQ_DIV_BY4
+ * 3- I2C_FREQ_DIV_BY16
+ * 4- I2C_FREQ_DIV_BY64
+ */
+#define I2C_PRESCALLER    	 I2C_FREQ_DIV_BY4
+
+
+/*
+ * I2C ACK STATE OPTIONS :-
+ * 1- I2C_ACK_DIS
+ * 2- I2C_ACK_ENB
+ */
+#define I2C_ACK_STATE		I2C_ACK_ENB
+
+
+/*
+ * I2C GENERAL CALL RECOGNITION	STATE OPTIONS :-
+ * 1- I2C_GEN_CALL_REC_DIS
+ * 2- I2C_GEN_CALL_REC_ENB
+ */
+#define I2C_GEN_CALL_REC_STATE      I2C_GEN_CALL_REC_ENB
+
+
+
+#endif /* MCAL_I2C_I2C_CONFIG_H_ */
